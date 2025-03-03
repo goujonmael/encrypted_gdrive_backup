@@ -4,3 +4,7 @@ Because Google is known for its respect for privacy and ... I burned my entire R
 
 Using [Rclone](https://rclone.org/drive/) to backup
 Using [Dumb fish method](YouReReallyDumb) to encrypt
+
+To be done :
+- encryption
+- cron task
