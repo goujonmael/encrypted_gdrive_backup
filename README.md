@@ -1,4 +1,7 @@
+
 # Encrypted Google Drive backup
+<img src="https://github.com/user-attachments/assets/610c7259-1049-42ec-8e21-8a43335d7fe9" alt="gdrive_laptop" width="400" />
+
 Automatic encryption and backup of laptop directory files to Google Drive
 Because Google is known for its respect for privacy and ... I burned my entire Raid.
 
