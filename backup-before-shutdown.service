@@ -1,0 +1,14 @@
+[Unit]
+Description=Run backup script before shutdown
+DefaultDependencies=no
+Before=shutdown.target reboot.target halt.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/gogo/scripts/backup.sh
+User=gogo
+Group=gogo
+RemainAfterExit=true
+
+[Install]
+WantedBy=shutdown.target reboot.target halt.target

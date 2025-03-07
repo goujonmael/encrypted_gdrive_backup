@@ -29,31 +29,12 @@ Then we add this script to our cron task to backup every night at 2
 ```
 ## Backup on shutdown
 We should use systemd to backup on shutdown
-```
-sudo nano /etc/systemd/system/backup-before-shutdown.service
-```
-Switch the user, group & dirtory to your match
-```
-[Unit]
-Description=Run backup script before shutdown
-DefaultDependencies=no
-Before=shutdown.target reboot.target halt.target
+Move `backup-before-shutdown.service` under `/etc/systemd/system/`
+Edit the service to switch the user, group & directory to your match
 
-[Service]
-Type=oneshot
-ExecStart=/home/gogo/scripts/backup.sh
-User=gogo
-Group=gogo
-RemainAfterExit=true
-
-[Install]
-WantedBy=shutdown.target reboot.target halt.target
-```
 Enable and start the service
 ```
 sudo systemctl enable backup-before-shutdown.service
 sudo systemctl start backup-before-shutdown.service
 ```
 
-To be done :
-- encryption
